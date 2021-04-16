@@ -1,0 +1,22 @@
+{
+  "name": "cloudflare-dev-challenge",
+  "version": "2020.04.16-build.1",
+  "description": "Cloudflare Dev Challenge",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "workers-ci build src/index.js",
+    "deploy": "workers-ci deploy src/index.js dev-challenge",
+    "format": "prettier --write 'src/*.{js,json}' --arrow-parens avoid --trailing-comma none"
+  },
+  "author": "Hugo Romano <adaptive@hey.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "2.2.1",
+    "workers-ci": "0.1.8"
+  },
+  "dependencies": {
+    "@adaptivelink/iata": "0.0.7",
+    "@adaptivelink/pops": "0.2.25",
+    "geolib": "^3.3.1"
+  }
+}
