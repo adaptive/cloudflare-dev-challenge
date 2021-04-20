@@ -1,7 +1,7 @@
 import { version } from "../package.json";
 import { distance } from "./_functions";
 
-import IATA from "@adaptivelink/iata";
+import PoPs from "@adaptivelink/pops";
 
 var data;
 
@@ -16,7 +16,7 @@ const handleRequest = async event => {
   }
 
   var lat, lon, concerts;
-  [lat, lon] = IATA.airports.get("MAD");
+  [lat, lon] = PoPs[event.request.cf.colo].geo;
   if (event.request.cf.latitude) lat = event.request.cf.latitude;
   if (event.request.cf.longitude) lon = event.request.cf.longitude;
 
